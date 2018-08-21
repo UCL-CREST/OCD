@@ -274,4 +274,4 @@ Using the results from Experimental Scenario 5, we present the tools performance
 
 #### Raw data of the results from the four experimental scenarios can be downloaded below:
 
-##### [Results from the genereated SOCO, and SOCOgen data set](https://github.com/UCL-CREST/ocd/blob/master/results_generated_soco.zip)
+##### [Results from the genereated SOCO, and SOCO<sub>gen</sub> data set](https://github.com/UCL-CREST/ocd/blob/master/results_generated_soco.zip)
