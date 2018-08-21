@@ -70,11 +70,11 @@ Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/
 | bzip2ncd |	NCD with bzip2 | |
 | gzipncd	| NCD with gzip |	|
 | xzncd	| NCD with xz	| |
-| icd		| ![Experimental Framework](https://github.com/UCL-CREST/ocd/blob/master/1.png) | |
+| icd		| ![ICD](https://github.com/UCL-CREST/ocd/blob/master/2.png) | |
 | ncd	| ncd tool with bzlib & zlib | [Download](http://complearn.org/ncd.html) |
 | Others | | |
-| bsdiff | | |
-| diff | | |
+| bsdiff | ![bsdiff](https://github.com/UCL-CREST/ocd/blob/master/3.png) | |
+| diff | ![diff](https://github.com/UCL-CREST/ocd/blob/master/4.png) | |
 | py-difflib | Gestalt pattern matching	| [Download](https://docs.python.org/2/library/difflib.html) |
 | py-fuzzywuzzy |	fuzzy string matching	| [Download](https://github.com/seatgeek/fuzzywuzzy) |
 | py-jellyfish | approximate and phonetic matching of strings py-ngram fuzzy search based using n-gram | [Download](https://github.com/jamesturk/jellyfish) |
