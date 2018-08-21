@@ -24,12 +24,12 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 6. [Scenario 4: Ranked Results](#scenario-4)
 7. [Scenario 5: Local + Global Modifications (data set)](#scenario-5)
 8. [Results](#results)
-9. [Research Question 1 (Performance comparison)](#research-question-1)
-10. [Research Question 2 (Optimal Configurations)](#research-question-2)
-11. [Research Question 3 (Normalisation by Decompilation)](#research-question-3)
-12. [Research Question 4 (Reuse of Configurations)](#research-question-4)
-13. [Research Question 5 (Ranked Results)](#research-question-5)
-14. [Research Question 6 (Local + Global Code Modifications)](#research-question-6)
+9. [Research Question 1 (Performance comparison)](#rq1)
+10. [Research Question 2 (Optimal Configurations)](#rq2)
+11. [Research Question 3 (Normalisation by Decompilation)](#rq3)
+12. [Research Question 4 (Reuse of Configurations)](#rq4)
+13. [Research Question 5 (Ranked Results)](#rq5)
+14. [Research Question 6 (Local + Global Code Modifications)](#rq6)
 
 ---
 
