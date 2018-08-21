@@ -140,7 +140,7 @@ We measured the tools' performance on each Sim<sub>m</sub>(F) set. By applying t
 ### RQ1
 #### Performance Comparison
 
-How well do current similarity detection techniques perform in the presence of pervasive source code modifications and boiler-plate code?
+*How well do current similarity detection techniques perform in the presence of pervasive source code modifications and boiler-plate code?*
 
 #### Pervasively modified code (OCD data set)
 
@@ -165,4 +165,25 @@ The table below shows the performance of all the tools and their optimal configu
 **SOCO data set:** The ROC curves with their respective AUCs are displayed below. In term of the overall performance across the whole range of T, difflib is the best with the highest AUC of 0.9999.
 
 <img src="https://github.com/UCL-CREST/ocd/blob/master/roc_soco-crop.jpg" width="600px">
-![ROC-SOCO](https://github.com/UCL-CREST/ocd/blob/master/roc_soco-crop.jpg)
+
+### RQ2
+#### Optimal Configurations
+
+*What are the best parameter settings and similarity thresholds for the techniques?*
+
+The optimal configurations of the tools can be found from the table above (2nd and 3rd column). Specifically, we inspected ccfx's configurations and found the tool has its best configuration around b=19, t={7,9} and b=5, t={11,12} as depicted in the figure below.
+
+<img src="https://github.com/UCL-CREST/ocd/blob/master/ccfx_heatmap-crop.jpg" width="600px">
+
+From the scatter plot below, we can see that the default settings of ccfx, b=50, t=12 (denoted with a red X symbol), provides a decent precision but very low recall. We observed that one cannot tune ccfx to obtain the highest precision without sacrificing recall.
+
+<img src="https://github.com/UCL-CREST/ocd/blob/master/ccfx_prec_recall-crop.jpg" width="600px">
+
+### RQ3
+#### Normalisation by Decompilation
+
+*How much does compilation followed by decompilation as a pre-processing normalisation method improve detection results of pervasively modified code?*
+
+The results after adding compilation and decompilation for normalisation to the post-processing step before performing similarity detection is shown in the figure below. We can clearly observe that decompilation by both Krakatau and Procyon boosts the F-scores of every tool in the study.
+
+<img src="https://github.com/UCL-CREST/ocd/blob/master/f1_comparison_okp.jpg" width="800px">
