@@ -32,3 +32,5 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 ### The Experimental Framework
 
 The general framework of our study as shown below consists of 5 main steps. In Step 1, we collect test data consisting of Java source code files. Next, the source files are transformed by applying pervasive modifications at source and bytecode level. In the third step, all original and transformed source files are normalised. A simple form of normalisation is pretty printing the source files which is used in similarity or clone detection. We also use decompilation. In Step 4, the similarity detection tools are executed pairwise against the set of all normalised files, producing similarity reports for every pair. In the last step, the similarity reports are analysed.
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
