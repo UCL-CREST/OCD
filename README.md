@@ -39,7 +39,7 @@ The general framework of our study as shown below consists of 5 main steps. In S
 
 Several tools and techniques were used in this study. These fall into three categories: obfuscators, decompilers, and detectors. The tool set included source and bytecode obfuscators, and two decompilers. The detectors cover a wide range of similarity measurement techniques and methods including plagiarism and clone detection, compression distance, string matching, and information retrieval. All tools are open source in order to expedite the repeatability of our experiments.
 
-### Obfuscators, Decompilers
+#### Obfuscators, Decompilers
 
 Type	| Tool |	Link
 ------|------|------
@@ -48,3 +48,34 @@ Bytecode obfuscator	    | ProGuard  |	[Download](http://proguard.sourceforge.net
 Decompiler	            | Krakatau  |	[Download](https://github.com/Storyyeller/Krakatau)
 Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler)
 
+#### Similarity Detection Tools
+
+| Tool/technique	| Similarity calculation |	Link |
+|----------------|------------------------|------|
+| Clone detectors |   |  |
+| ccfx	| tokens and suffix tree matching	| [Download](http://www.ccfinder.net/) |
+| deckard	| characteristic vectors of AST optimised by LSH | [Download](https://github.com/skyhover/Deckard) |
+| iclones | tokens and generalised suffix tree	| [Download](http://www.softwareclones.org/iclones.php) |
+| nicad	| TXL and string comparison (LCS)	| [Download](http://www.txl.ca/nicaddownload.html) |
+| simian |	line-based string comparison	| [Download](http://www.harukizaemon.com/simian/) |
+| Plagiarism detectors | | |
+| jplag-java |	tokens, Karp Rabin matching, Greedy String Tiling	| [Download](https://jplag.ipd.kit.edu/) |
+| jplag-text |	tokens, Karp Rabin matching, Greedy String Tiling | [Download](https://jplag.ipd.kit.edu/) |
+| plaggie	| N/A (not disclosed) | [Download](https://www.cs.hut.fi/Software/Plaggie/) |
+| sherlock |	digital signatures | [Download](http://sydney.edu.au/engineering/it/%20scilect/sherlock/) |
+| simjava	| tokens and string alignment	| [Download](http://dickgrune.com/Programs/similarity_tester/) |
+| simtext	| tokens and string alignment | [Download](http://dickgrune.com/Programs/similarity_tester/) |
+| Compression | | |
+| 7zncd	| NCD with 7z	| |
+| bzip2ncd |	NCD with bzip2 | |
+| gzipncd	| NCD with gzip |	|
+| xzncd	| NCD with xz	| |
+| icd		| ![Experimental Framework](https://github.com/UCL-CREST/ocd/blob/master/1.png) | |
+| ncd	| ncd tool with bzlib & zlib | [Download](http://complearn.org/ncd.html) |
+| Others | | |
+| bsdiff | | |
+| diff | | |
+| py-difflib | Gestalt pattern matching	| [Download](https://docs.python.org/2/library/difflib.html) |
+| py-fuzzywuzzy |	fuzzy string matching	| [Download](https://github.com/seatgeek/fuzzywuzzy) |
+| py-jellyfish | approximate and phonetic matching of strings py-ngram fuzzy search based using n-gram | [Download](https://github.com/jamesturk/jellyfish) |
+| py-sklearn | cosine similarity from machine learning library | [Download](http://scikit-learn.org/stable/) |
