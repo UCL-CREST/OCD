@@ -38,3 +38,13 @@ The general framework of our study as shown below consists of 5 main steps. In S
 ### Tools and Techniques
 
 Several tools and techniques were used in this study. These fall into three categories: obfuscators, decompilers, and detectors. The tool set included source and bytecode obfuscators, and two decompilers. The detectors cover a wide range of similarity measurement techniques and methods including plagiarism and clone detection, compression distance, string matching, and information retrieval. All tools are open source in order to expedite the repeatability of our experiments.
+
+### Obfuscators, Decompilers
+
+Type	| Tool |	Link
+------|------|------
+Source code obfuscator	| Artifice	| [Download](https://www.tu-braunschweig.de/isf/research/artifice/index.html)
+Bytecode obfuscator	    | ProGuard  |	[Download](http://proguard.sourceforge.net/)
+Decompiler	            | Krakatau  |	[Download](https://github.com/Storyyeller/Krakatau)
+Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler)
+
