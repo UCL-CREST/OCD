@@ -93,15 +93,15 @@ The data set in this scenario is created to simulate pervasive modifications mad
 
 ![Scenario 1](https://github.com/UCL-CREST/ocd/blob/master/5.png)
 
-##### Data set: Obfuscation/Compilation/Decompilation (OCD)
+##### Data set: [Obfuscation/Compilation/Decompilation (OCD)](https://github.com/UCL-CREST/ocd/blob/master/generated.zip)
 
 ### Scenario 2
 #### Decompilation
 
 In this scenario, the data set is based on the same set of 100 source code files generated in Scenario 1. However, we added normalisation through decompilation to the post-processing (step 3 in the framework) by compiling all the transformed files using javac and decompiling them using either Krakatau or Procyon.
 
-##### Data set: OCD<sup>decomp</sup> (krakatau)
-##### Data set: OCD<sup>decomp</sup> (procyon)
+##### Data set: [OCD<sup>decomp</sup> (krakatau)](https://github.com/UCL-CREST/ocd/blob/master/generated_krakatau.zip)
+##### Data set: [OCD<sup>decomp</sup> (procyon)](https://github.com/UCL-CREST/ocd/blob/master/generated_procyon.zip)
 
 ### Scenario 3
 #### Reused Boiler-Plate Code
