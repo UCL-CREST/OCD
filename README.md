@@ -109,14 +109,14 @@ In this scenario, the data set is based on the same set of 100 source code files
 In this scenario, we want to analyse the tools' performance against a data set that contains files in which fragments of (boiler-plate) code are reused with or without modifications applied. We choose the training set of SOCO (SOurce COde re-use) data set that has been provided in a competition for discovering monolingual re-used source code amongst a given set of programs. The files in the SOCO data set are adapted from the study by Arwin et al. (2006). We found that many of them share the same or very similar boiler-plate code fragments which perform the same task. Some of the boiler-plate fragments have been modified to adapt them to the environment in which the fragment is re-used.
 
 ##### Data set: the SOCO data set can be obtained from the competition website (http://users.dsic.upv.es/grupos/nle/soco/). 
-##### Fixed answer key: the answer key for SOCO java training data set containing 97 pairs of reused code download
+##### Fixed answer key: the answer key for SOCO java training data set containing 97 pairs of reused code [download](https://github.com/UCL-CREST/ocd/blob/master/soco_train_clones_fixed.txt)
 
 ### Scenario 4
 #### Ranked Results
 
 In our three previous scenarios (Ragkhitwetsagul et al., 2016), we compared the tools’ performances using their optimal F-scores. The F-score offers weighted harmonic mean of precision and recall. It is a set- based measure that does not consider any ordering of results. Instead of looking at the results as a set and applying a cut-off threshold to obtain true and false positives, we consider only a subset of the results based on their rankings. We adopt three error measures mainly used in information retrieval: precision-at-n (prec@n), average r- precision (ARP), and mean average precision (MAP) to measure the tools’ performances.
 
-##### Further reading: Manning et al., Introduction to Information Retrieval, Cambridge University Press. 2008.
+##### Further reading: [Manning et al., Introduction to Information Retrieval, Cambridge University Press. 2008.](http://nlp.stanford.edu/IR-book/)
 
 ### Scenario 5
 #### Local + Glocal Modifications
@@ -128,10 +128,9 @@ The table below presents the 10 pervasive code modification types; including the
 
 We measured the tools' performance on each Sim<sub>m</sub>(F) set. By applying tools on a pair of original and pervasively modified code, we measure the tools based on one particular type of code modifications at a time.
 
-
 <img src="https://github.com/UCL-CREST/ocd/blob/master/rq6_eq.png" width="600px">
 
-##### Data set: SOCO<sup>generated</sup>
+##### Data set: [SOCO<sup>generated</sup>](https://github.com/UCL-CREST/ocd/blob/master/soco_generated.zip)
 
 ---
 
@@ -275,4 +274,4 @@ Using the results from Experimental Scenario 5, we present the tools performance
 
 #### Raw data of the results from the four experimental scenarios can be downloaded below:
 
-##### Results from the genereated SOCO, and SOCOgen data set
+##### [Results from the genereated SOCO, and SOCOgen data set](https://github.com/UCL-CREST/ocd/blob/master/results_generated_soco.zip)
