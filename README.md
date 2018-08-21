@@ -15,7 +15,7 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 
 ### Contents
 1. [The Experimental Framework](#the-experimental-framework)
-2. Tools and Techniques
+2. [Tools and Techniques](#tools-and-techniques)
 3. Scenario 1: Pervasive Modifications (data set)
 4. Scenario 2: Decompilation (data set)
 5. Scenario 3: Reused Boiler-Plate Code (data set)
@@ -33,4 +33,8 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 
 The general framework of our study as shown below consists of 5 main steps. In Step 1, we collect test data consisting of Java source code files. Next, the source files are transformed by applying pervasive modifications at source and bytecode level. In the third step, all original and transformed source files are normalised. A simple form of normalisation is pretty printing the source files which is used in similarity or clone detection. We also use decompilation. In Step 4, the similarity detection tools are executed pairwise against the set of all normalised files, producing similarity reports for every pair. In the last step, the similarity reports are analysed.
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Experimental Framework](https://github.com/UCL-CREST/ocd/blob/master/1.png)
+
+### Tools and Techniques
+
+Several tools and techniques were used in this study. These fall into three categories: obfuscators, decompilers, and detectors. The tool set included source and bytecode obfuscators, and two decompilers. The detectors cover a wide range of similarity measurement techniques and methods including plagiarism and clone detection, compression distance, string matching, and information retrieval. All tools are open source in order to expedite the repeatability of our experiments.
