@@ -1,10 +1,3 @@
-<table>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/ucl_logo.png" width="250px"></td>
-    <td><img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/crest_logo.png" width="200px"></td>
-  </tr>
-</table>
-
 ### [Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/index.html), [David Clark](http://www0.cs.ucl.ac.uk/staff/D.Clark/)
 #### [CREST centre](http://crest.cs.ucl.ac.uk/), Department of Computer Science, University College London
 
@@ -283,3 +276,10 @@ Using the results from Experimental Scenario 5, we present the tools performance
 #### Raw data of the results from the four experimental scenarios can be downloaded below:
 
 ##### [Results from the genereated SOCO, and SOCO<sup>gen</sup> data set](https://github.com/UCL-CREST/ocd/blob/master/results_generated_soco.zip)
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/ucl_logo.png" width="250px"></td>
+    <td><img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/crest_logo.png" width="200px"></td>
+  </tr>
+</table>
