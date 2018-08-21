@@ -1,3 +1,6 @@
+![CREST](https://raw.githubusercontent.com/UCL-CREST/ocd/master/ucl_logo.png)
+![CREST](https://raw.githubusercontent.com/UCL-CREST/ocd/master/crest_logo.png)
+
 ### [Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/index.html), [David Clark](http://www0.cs.ucl.ac.uk/staff/D.Clark/)
 #### [CREST centre](http://crest.cs.ucl.ac.uk/), Department of Computer Science, University College London
 
