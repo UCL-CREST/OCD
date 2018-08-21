@@ -1,4 +1,3 @@
-## OCD Framework: A Comparison of Code Similarity Analysers
 ### [Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/index.html), [David Clark](http://www0.cs.ucl.ac.uk/staff/D.Clark/)
 #### [CREST centre](http://crest.cs.ucl.ac.uk/), Department of Computer Science, University College London
 
