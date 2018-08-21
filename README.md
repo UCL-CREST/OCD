@@ -17,17 +17,17 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 1. [The Experimental Framework](#the-experimental-framework)
 2. [Tools and Techniques](#tools-and-techniques)
 3. [Scenario 1: Pervasive Modifications (data set)](#scenario-1)
-4. Scenario 2: Decompilation (data set)
-5. Scenario 3: Reused Boiler-Plate Code (data set)
-6. Scenario 4: Ranked Results
-7. Scenario 5: Local + Global Modifications (data set)
-8. Results
-9. Research Question 1 (Performance comparison)
-10. Research Question 2 (Optimal Configurations)
-11. Research Question 3 (Normalisation by Decompilation)
-12. Research Question 4 (Reuse of Configurations)
-13. Research Question 5 (Ranked Results)
-14. Research Question 6 (Local + Global Code Modifications)
+4. [Scenario 2: Decompilation (data set)](#scenario-2)
+5. [Scenario 3: Reused Boiler-Plate Code (data set)](#scenario-3)
+6. [Scenario 4: Ranked Results](#scenario-4)
+7. [Scenario 5: Local + Global Modifications (data set)](#scenario-5)
+8. [Results](#results)
+9. [Research Question 1 (Performance comparison)](#research-question-1)
+10. [Research Question 2 (Optimal Configurations)](#research-question-2)
+11. [Research Question 3 (Normalisation by Decompilation)](#research-question-3)
+12. [Research Question 4 (Reuse of Configurations)](#research-question-4)
+13. [Research Question 5 (Ranked Results)](#research-question-5)
+14. [Research Question 6 (Local + Global Code Modifications)](#research-question-6)
 
 ### The Experimental Framework
 
@@ -94,8 +94,8 @@ The data set in this scenario is created to simulate pervasive modifications mad
 
 In this scenario, the data set is based on the same set of 100 source code files generated in Scenario 1. However, we added normalisation through decompilation to the post-processing (step 3 in the framework) by compiling all the transformed files using javac and decompiling them using either Krakatau or Procyon.
 
-##### Data set: OCDdecomp (krakatau)
-##### Data set: OCDdecomp (procyon)
+##### Data set: OCD<sup>decomp</sup> (krakatau)
+##### Data set: OCD<sup>decomp</sup> (procyon)
 
 ### Scenario 3
 #### Reused Boiler-Plate Code
@@ -109,3 +109,17 @@ In this scenario, we want to analyse the tools' performance against a data set t
 #### Ranked Results
 
 In our three previous scenarios (Ragkhitwetsagul et al., 2016), we compared the tools’ performances using their optimal F-scores. The F-score offers weighted harmonic mean of precision and recall. It is a set- based measure that does not consider any ordering of results. Instead of looking at the results as a set and applying a cut-off threshold to obtain true and false positives, we consider only a subset of the results based on their rankings. We adopt three error measures mainly used in information retrieval: precision-at-n (prec@n), average r- precision (ARP), and mean average precision (MAP) to measure the tools’ performances.
+
+##### Further reading: Manning et al., Introduction to Information Retrieval, Cambridge University Press. 2008.
+
+### Scenario 5
+#### Local + Glocal Modifications
+
+We have two objectives for this experimental scenario. First, we are interested in a situation where local and global code modifications are combined together. Second, we shift our focus from measuring how good our tools are on finding all similar pairs of pervasively modified code as we did in Scenario 1 to measure how good our tools are on finding similar pairs of code based on each pervasive code modification type. 
+The table below presents the 10 pervasive code modification types; including the original (O), source code obfuscation by Artifice (A), decompilation by Krakatau (K), decompilation by Procyon (P<sub>c</sub>), bytecode obfuscation by ProGuard and decompilation by Krakatau (P<sub>g</sub>K), bytecode obfuscation by ProGuard and decompilation by Procyon (P<sub>g</sub>Pc), and four other combinations (AK, AP<sub>c</sub>, AP<sub>g</sub>K, AP<sub>g</sub>P<sub>c</sub>); and ground truth for each of them. The number of code pairs and true positive pairs of A to AP<sub>g</sub>P<sub>c</sub> are twice larger than the Original (O) type because of asymmetric similarity between pairs, i.e. Sim(x,y) and Sim(y,x).
+
+<table border="1" class="contenttable"> <tbody><tr> <td rowspan="2">Type</td><td rowspan="2">Modification</td> <td colspan="2">Obfuscation</td><td rowspan="2">Decomp.</td><td rowspan="2">Pair</td><td rowspan="2">TP</td> </tr> <tr> <td> Source</td><td>Bytecode</td></tr> <tr> <td>O</td><td>Original</td><td></td><td></td><td></td> <td align="right"> 1,089</td> <td align="right">55</td> </tr> <tr> <td>A</td><td>Artifice</td><td align="center">X</td><td></td><td></td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>K</td><td>Krakatau</td><td></td><td></td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>Pc</td><td>Procyon</td><td></td><td></td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>PgK</td><td>ProGuard + Krakatau</td><td></td><td align="center">X</td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>PgPC</td><td>ProGuard + Procyon</td><td></td><td align="center">X</td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>AK</td><td>Artifice + Krakatau</td><td align="center">X </td><td></td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>APc</td><td>Artifice + Procyon</td><td align="center">X</td><td></td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>APgK</td><td>Artifice + ProGuard + Krakatau</td><td align="center">X</td><td align="center">X</td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> <tr> <td>APgPc</td><td>Artifice + ProGuard + Procyon</td><td align="center">X</td><td align="center">X</td><td align="center">X</td> <td align="right"> 2,178</td> <td align="right">110</td> </tr> </tbody></table>
+
+We measured the tools' performance on each Sim<sub>m</sub>(F) set. By applying tools on a pair of original and pervasively modified code, we measure the tools based on one particular type of code modifications at a time.
+
+![RQ6 Equation](https://github.com/UCL-CREST/ocd/blob/master/rq6_eq.png)
