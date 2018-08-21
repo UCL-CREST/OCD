@@ -37,7 +37,7 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 
 The general framework of our study as shown below consists of 5 main steps. In Step 1, we collect test data consisting of Java source code files. Next, the source files are transformed by applying pervasive modifications at source and bytecode level. In the third step, all original and transformed source files are normalised. A simple form of normalisation is pretty printing the source files which is used in similarity or clone detection. We also use decompilation. In Step 4, the similarity detection tools are executed pairwise against the set of all normalised files, producing similarity reports for every pair. In the last step, the similarity reports are analysed.
 
-![Experimental Framework](https://github.com/UCL-CREST/ocd/blob/master/1.png)
+![Experimental Framework](https://raw.githubusercontent.com/UCL-CREST/ocd/master/1.png)
 
 ### Tools and Techniques
 
@@ -74,11 +74,11 @@ Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/
 | bzip2ncd |	NCD with bzip2 | |
 | gzipncd	| NCD with gzip |	|
 | xzncd	| NCD with xz	| |
-| icd		| ![ICD](https://github.com/UCL-CREST/ocd/blob/master/2.png) | |
+| icd		| ![ICD](https://raw.githubusercontent.com/UCL-CREST/ocd/master/2.png) | |
 | ncd	| ncd tool with bzlib & zlib | [Download](http://complearn.org/ncd.html) |
 | Others | | |
-| bsdiff | ![bsdiff](https://github.com/UCL-CREST/ocd/blob/master/3.png) | |
-| diff | ![diff](https://github.com/UCL-CREST/ocd/blob/master/4.png) | |
+| bsdiff | ![bsdiff](https://raw.githubusercontent.com/UCL-CREST/ocd/master/3.png) | |
+| diff | ![diff](https://raw.githubusercontent.com/UCL-CREST/ocd/master/4.png) | |
 | py-difflib | Gestalt pattern matching	| [Download](https://docs.python.org/2/library/difflib.html) |
 | py-fuzzywuzzy |	fuzzy string matching	| [Download](https://github.com/seatgeek/fuzzywuzzy) |
 | py-jellyfish | approximate and phonetic matching of strings py-ngram fuzzy search based using n-gram | [Download](https://github.com/jamesturk/jellyfish) |
@@ -91,7 +91,7 @@ Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/
 
 The data set in this scenario is created to simulate pervasive modifications made to source code by using source and bytecode obfuscators: Artifice, and ProGuard. The total number of pervasively modified source code files is 100. The process of code transformations is displayed below. The data set is called OCD (Obfuscation/Compilation/Decompilation).
 
-![Scenario 1](https://github.com/UCL-CREST/ocd/blob/master/5.png)
+![Scenario 1](https://raw.githubusercontent.com/UCL-CREST/ocd/master/5.png)
 
 ##### Data set: [Obfuscation/Compilation/Decompilation (OCD)](https://github.com/UCL-CREST/ocd/blob/master/generated.zip)
 
@@ -128,7 +128,7 @@ The table below presents the 10 pervasive code modification types; including the
 
 We measured the tools' performance on each Sim<sub>m</sub>(F) set. By applying tools on a pair of original and pervasively modified code, we measure the tools based on one particular type of code modifications at a time.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/rq6_eq.png" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/rq6_eq.png" width="600px">
 
 ##### Data set: [SOCO<sup>generated</sup>](https://github.com/UCL-CREST/ocd/blob/master/soco_generated.zip)
 
@@ -159,11 +159,11 @@ The table below shows the performance of all the tools and their optimal configu
 
 **OCD data set:** The ROC curves with their respective AUCs are displayed below. In term of the overall performance across the whole range of T, ccfx is the best with the highest AUC of 0.9995.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/roc-crop.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/roc-crop.jpg" width="600px">
 
 **SOCO data set:** The ROC curves with their respective AUCs are displayed below. In term of the overall performance across the whole range of T, difflib is the best with the highest AUC of 0.9999.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/roc_soco-crop.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/roc_soco-crop.jpg" width="600px">
 
 ### RQ2
 #### Optimal Configurations
@@ -172,11 +172,11 @@ The table below shows the performance of all the tools and their optimal configu
 
 The optimal configurations of the tools can be found from the table above (2nd and 3rd column). Specifically, we inspected ccfx's configurations and found the tool has its best configuration around b=19, t={7,9} and b=5, t={11,12} as depicted in the figure below.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/ccfx_heatmap-crop.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/ccfx_heatmap-crop.jpg" width="600px">
 
 From the scatter plot below, we can see that the default settings of ccfx, b=50, t=12 (denoted with a red X symbol), provides a decent precision but very low recall. We observed that one cannot tune ccfx to obtain the highest precision without sacrificing recall.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/ccfx_prec_recall-crop.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/ccfx_prec_recall-crop.jpg" width="600px">
 
 ### RQ3
 #### Normalisation by Decompilation
@@ -185,7 +185,7 @@ From the scatter plot below, we can see that the default settings of ccfx, b=50,
 
 The results after adding compilation and decompilation for normalisation to the post-processing step before performing similarity detection is shown in the figure below. We can clearly observe that decompilation by both Krakatau and Procyon boosts the F-scores of every tool in the study.
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/f1_comparison_okp.jpg" width="800px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/f1_comparison_okp.jpg" width="800px">
 
 The complete results can be found from the two tables below:
 
@@ -243,11 +243,11 @@ We also varied several number of n for precision-at-n. The plot of the tools' pe
 
 #### Multiple prec-at-n values for OCD data set
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/prec_at_n_line.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/prec_at_n_line.jpg" width="600px">
 
 #### Multiple prec-at-n values for SOCO data set
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/prec_at_n_soco_line.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/prec_at_n_soco_line.jpg" width="600px">
 
 #### Statistical Tests
 
@@ -264,7 +264,7 @@ We evaluate the tools on a data set combining both local and global code modific
 
 #### Tools' Performances vs. Individual Pervasive Modification Type
 
-<img src="https://github.com/UCL-CREST/ocd/blob/master/rq6_boxplot.jpg" width="600px">
+<img src="https://raw.githubusercontent.com/UCL-CREST/ocd/master/rq6_boxplot.jpg" width="600px">
 
 Using the results from Experimental Scenario 5, we present the tools performances based on F-scores in the table below and show the distribution of F-scores in a boxplot. The F-scores are grouped according to the 10 pervasive code modification types. The numbers are highlighted when F-scores are higher than 0.8.
 
