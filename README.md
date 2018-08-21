@@ -16,7 +16,7 @@ Source code analysis to detect code cloning, code plagiarism, and code reuse suf
 ### Contents
 1. [The Experimental Framework](#the-experimental-framework)
 2. [Tools and Techniques](#tools-and-techniques)
-3. Scenario 1: Pervasive Modifications (data set)
+3. [Scenario 1: Pervasive Modifications (data set)](#scenario-1)
 4. Scenario 2: Decompilation (data set)
 5. Scenario 3: Reused Boiler-Plate Code (data set)
 6. Scenario 4: Ranked Results
@@ -79,3 +79,33 @@ Decompiler              | Procyon	  | [Download](https://bitbucket.org/mstrobel/
 | py-fuzzywuzzy |	fuzzy string matching	| [Download](https://github.com/seatgeek/fuzzywuzzy) |
 | py-jellyfish | approximate and phonetic matching of strings py-ngram fuzzy search based using n-gram | [Download](https://github.com/jamesturk/jellyfish) |
 | py-sklearn | cosine similarity from machine learning library | [Download](http://scikit-learn.org/stable/) |
+
+### Scenario 1
+#### Pervasive Modifications
+
+The data set in this scenario is created to simulate pervasive modifications made to source code by using source and bytecode obfuscators: Artifice, and ProGuard. The total number of pervasively modified source code files is 100. The process of code transformations is displayed below. The data set is called OCD (Obfuscation/Compilation/Decompilation).
+
+![Scenario 1](https://github.com/UCL-CREST/ocd/blob/master/5.png)
+
+##### Data set: Obfuscation/Compilation/Decompilation (OCD)
+
+### Scenario 2
+#### Decompilation
+
+In this scenario, the data set is based on the same set of 100 source code files generated in Scenario 1. However, we added normalisation through decompilation to the post-processing (step 3 in the framework) by compiling all the transformed files using javac and decompiling them using either Krakatau or Procyon.
+
+##### Data set: OCDdecomp (krakatau)
+##### Data set: OCDdecomp (procyon)
+
+### Scenario 3
+#### Reused Boiler-Plate Code
+
+In this scenario, we want to analyse the tools' performance against a data set that contains files in which fragments of (boiler-plate) code are reused with or without modifications applied. We choose the training set of SOCO (SOurce COde re-use) data set that has been provided in a competition for discovering monolingual re-used source code amongst a given set of programs. The files in the SOCO data set are adapted from the study by Arwin et al. (2006). We found that many of them share the same or very similar boiler-plate code fragments which perform the same task. Some of the boiler-plate fragments have been modified to adapt them to the environment in which the fragment is re-used.
+
+##### Data set: the SOCO data set can be obtained from the competition website (http://users.dsic.upv.es/grupos/nle/soco/). 
+##### Fixed answer key: the answer key for SOCO java training data set containing 97 pairs of reused code download
+
+### Scenario 4
+#### Ranked Results
+
+In our three previous scenarios (Ragkhitwetsagul et al., 2016), we compared the tools’ performances using their optimal F-scores. The F-score offers weighted harmonic mean of precision and recall. It is a set- based measure that does not consider any ordering of results. Instead of looking at the results as a set and applying a cut-off threshold to obtain true and false positives, we consider only a subset of the results based on their rankings. We adopt three error measures mainly used in information retrieval: precision-at-n (prec@n), average r- precision (ARP), and mean average precision (MAP) to measure the tools’ performances.
