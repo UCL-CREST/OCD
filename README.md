@@ -3,7 +3,7 @@
 
 Additional material to:
 
-Chaiyong Ragkhitwetsagul, Jens Krinke, David Clark: A Comparison of Code Similarity Analysers. (Please email the authors for a copy.)
+[Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/), [David Clark](http://www0.cs.ucl.ac.uk/staff/dclark/): A Comparison of Code Similarity Analysers. (Please email the authors for a copy.)
 
 As an extension to:
 
