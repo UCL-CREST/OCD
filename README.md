@@ -110,6 +110,7 @@ In this scenario, the data set is based on the same set of 100 source code files
 In this scenario, we want to analyse the tools' performance against a data set that contains files in which fragments of (boiler-plate) code are reused with or without modifications applied. We choose the training set of SOCO (SOurce COde re-use) data set that has been provided in a competition for discovering monolingual re-used source code amongst a given set of programs. The files in the SOCO data set are adapted from the study by Arwin et al. (2006). We found that many of them share the same or very similar boiler-plate code fragments which perform the same task. Some of the boiler-plate fragments have been modified to adapt them to the environment in which the fragment is re-used.
 
 ##### Data set: the SOCO data set can be obtained from the competition website (http://users.dsic.upv.es/grupos/nle/soco/). 
+Update: the original website is now not accessible. You can download a copy of the (pretty-printed) SOCO data set [here](https://github.com/UCL-CREST/ocd/blob/master/soco_f.zip). 
 ##### Fixed answer key: the answer key for SOCO java training data set containing 97 pairs of reused code [download](https://github.com/UCL-CREST/ocd/blob/master/soco_train_clones_fixed.txt)
 
 ### Scenario 4
