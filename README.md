@@ -3,7 +3,9 @@
 
 Additional material to:
 
-[Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/), [David Clark](http://www0.cs.ucl.ac.uk/staff/dclark/): A Comparison of Code Similarity Analysers. (Please email the authors for a copy.)
+[Chaiyong Ragkhitwetsagul](https://cragkhit.github.io), [Jens Krinke](http://www0.cs.ucl.ac.uk/staff/j.krinke/), [David Clark](http://www0.cs.ucl.ac.uk/staff/dclark/): A Comparison of Code Similarity Analysers.
+Empirical Software Engineering, 23, 2464–2519 (2018).
+DOI: [10.1007/s10664-017-9564-7](https://doi.org/10.1007/s10664-017-9564-7)
 
 As an extension to:
 
